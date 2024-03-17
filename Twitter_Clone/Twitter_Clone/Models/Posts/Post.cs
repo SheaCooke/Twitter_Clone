@@ -15,5 +15,6 @@ namespace Twitter_Clone.Models.Posts
         int UserID { get; set; }
 
         String Content { get; set; }
+
     }
 }

@@ -8,7 +8,7 @@ namespace Twitter_Clone.Models.Posts
 {
     interface ITweet
     {
-        int reTweet();
+        int ReTweetPost();
         int Like();
         int Dislike();
         int Report();
