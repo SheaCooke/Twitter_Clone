@@ -9,6 +9,8 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using Microsoft.Extensions.DependencyInjection;
+using System.Data.Entity;
+using Twitter_Clone.Models.User;
 
 namespace Twitter_Clone
 {
@@ -18,10 +20,12 @@ namespace Twitter_Clone
 
         protected void Application_Start()
         {
+            //Database
+            Database.SetInitializer(new CreateDatabaseIfNotExists<ApplicationDbContext>());
+
+            //Dependency injection
             var services = new ServiceCollection();
-
             ConfigureServices(services);
-
             ServiceProvider = services.BuildServiceProvider();
 
             AreaRegistration.RegisterAllAreas();

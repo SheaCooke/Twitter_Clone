@@ -10,7 +10,6 @@ namespace Twitter_Clone.Controllers
 {
     public class HomeController : Controller
     {
-
         private readonly ILogger _logger;
 
         public ActionResult Index()
